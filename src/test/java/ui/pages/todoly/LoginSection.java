@@ -15,7 +15,7 @@ public class LoginSection {
     public TextBox fullName = new TextBox(By.id("ctl00_MainContent_SignupControl1_TextBoxFullName"));
     public TextBox email = new TextBox(By.id("ctl00_MainContent_SignupControl1_TextBoxEmail"));
     public TextBox pwd = new TextBox(By.id("ctl00_MainContent_SignupControl1_TextBoxPassword"));
-    public Button agreeButton = new Button(By.id("ctl00_MainContent_SignupControl1_TextBoxPassword"));
+    public Button agreeButton = new Button(By.id("ctl00_MainContent_SignupControl1_CheckBoxTerms"));
     public Button singupButton = new Button(By.id("ctl00_MainContent_SignupControl1_ButtonSignup"));
     public void login(String email, String pwd){
         this.emailTxtBox.setText(email);
@@ -23,11 +23,13 @@ public class LoginSection {
         this.entryButton.click();
     }
 
-    public void createAccount(String fullName, String email,String pwd){
+    public void createAccount(String fullName, String email,String pwd) throws InterruptedException {
         this.fullName.setText(fullName);
         this.email.setText(email);
         this.pwd.setText(pwd);
+        Thread.sleep(1000);
         agreeButton.click();
+        Thread.sleep(1000);
         singupButton.click();
 
     }

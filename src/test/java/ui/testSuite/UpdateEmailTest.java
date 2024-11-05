@@ -20,7 +20,7 @@ public class UpdateEmailTest extends BaseTestTodoLy {
     @Test
     public void createUpdateDeleteListTest() throws InterruptedException {
         String fullName = "Chico Layla";
-        String email = "skibidisigma@ponmi.com";
+        String email = "skibidisigma@ponmi.digital";
         String pwd = "123456789";
         String newEmail = "gigachat@xxx.com";
 
@@ -28,20 +28,23 @@ public class UpdateEmailTest extends BaseTestTodoLy {
         loginSection.createAccountButton.click();
         loginSection.createAccount(fullName, email, pwd);
         mainPage.settingsButton.click();
-        Assertions.assertEquals(email, settingsSection.getEmail(email).getText(), "Error:  no se creó la cuenta");
+        Assertions.assertEquals(email, settingsSection.getEmail(email), "Error:  no se creó la cuenta");
 
         //Actualizar Email
         settingsSection.editEmail(newEmail);
-        Thread.sleep(3000);
-        loginSection.loginButton.click();
-        loginSection.login(newEmail, pwd);
         Thread.sleep(5000);
         Alert alert = chrome.switchTo().alert();
         alert.accept();
         Thread.sleep(5000);
 
+        Thread.sleep(3000);
+        loginSection.loginButton.click();
+        loginSection.login(newEmail, pwd);
 
-        Assertions.assertTrue(mainPage.settingsButton.isControlDisplayed(), "Error:  actualizo el email correctamente");
+
+
+        mainPage.settingsButton.click();
+        Assertions.assertEquals(email, settingsSection.getEmail(newEmail), "Error:  no se creó la cuenta");
 
 
     }
