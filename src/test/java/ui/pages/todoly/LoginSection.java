@@ -15,7 +15,7 @@ public class LoginSection {
     public TextBox fullName = new TextBox(By.id("ctl00_MainContent_SignupControl1_TextBoxFullName"));
     public TextBox email = new TextBox(By.id("ctl00_MainContent_SignupControl1_TextBoxEmail"));
     public TextBox pwd = new TextBox(By.id("ctl00_MainContent_SignupControl1_TextBoxPassword"));
-    public Button agreeButton = new Button(By.id("ctl00$MainContent$SignupControl1$CheckBoxTerms"));
+    public Button agreeButton = new Button(By.id("ctl00_MainContent_SignupControl1_TextBoxPassword"));
     public Button singupButton = new Button(By.id("ctl00_MainContent_SignupControl1_ButtonSignup"));
     public void login(String email, String pwd){
         this.emailTxtBox.setText(email);
@@ -25,8 +25,8 @@ public class LoginSection {
 
     public void createAccount(String fullName, String email,String pwd){
         this.fullName.setText(fullName);
-        this.email.setText(fullName);
-        this.pwd.click();
+        this.email.setText(email);
+        this.pwd.setText(pwd);
         agreeButton.click();
         singupButton.click();
 

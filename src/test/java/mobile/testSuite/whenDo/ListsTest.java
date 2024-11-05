@@ -29,12 +29,12 @@ public class ListsTest extends WhendoTestBase {
         //Edit Lista
         editlistsScreen.getList(name).click();
         addListScreen.editList(updatedName);
-        Assertions.assertEquals(updatedName, editlistsScreen.getList(editedName).getText(),"Error:  no se editó la lista");
+        Assertions.assertEquals(updatedName, editlistsScreen.getList(updatedName).getText(),"Error:  no se editó la lista");
 
         //Borrar Lista
         editlistsScreen.getList(updatedName).click();
         addListScreen.deleteList();
-        Assertions.assertFalse(updatedName, editlistsScreen.getList(editedName).isControlDisplayed(),"Error:  no se borro la lista");
+        Assertions.assertFalse(editlistsScreen.getList(updatedName).isControlDisplayed(),"Error:  no se borro la lista");
 
 
     }

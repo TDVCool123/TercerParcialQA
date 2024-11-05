@@ -3,7 +3,7 @@ package mobile.controls;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import session.Session;
+import mobile.session.Session;
 
 public class AppiumControl {
     protected By locator;

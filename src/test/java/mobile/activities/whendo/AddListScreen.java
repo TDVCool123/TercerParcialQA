@@ -13,19 +13,19 @@ public class AddListScreen {
     public Button checkDeleteButton = new Button(By.id("android:id/button1"));
 
 
-    public Label createList(String name){
+    public void createList(String name){
         listName.setText(name);
         colorButton.click();
         saveListButton.click();
 
     }
 
-    public Label editList(String name){
+    public void editList(String name){
         listName.clearSetText(name);
         saveListButton.click();
     }
 
-    public Label deleteList(){
+    public void deleteList(){
         deleteListButton.click();
         checkDeleteButton.click();
     }

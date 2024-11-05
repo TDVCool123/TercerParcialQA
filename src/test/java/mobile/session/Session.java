@@ -1,6 +1,6 @@
 package mobile.session;
 
-import factoryDevices.FactoryDevices;
+import mobile.factoryDevices.FactoryDevices;
 import io.appium.java_client.AppiumDriver;
 
 public class Session {

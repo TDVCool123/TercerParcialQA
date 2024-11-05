@@ -1,6 +1,6 @@
 package ui.controls;
 
-import optimized.session.Session;
+import ui.session.Session;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
