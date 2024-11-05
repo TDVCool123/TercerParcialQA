@@ -17,8 +17,8 @@ public class Android implements IDevice{
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("appium:deviceName","TECNO SPARK 10C");
         capabilities.setCapability("appium:platformVersion","12");
-        capabilities.setCapability("appium:appPackage","com.transsion.calculator");
-        capabilities.setCapability("appium:appActivity","com.transsion.calculator.Calculator");
+        capabilities.setCapability("appium:appPackage","com.vrproductiveapps.whendo");
+        capabilities.setCapability("appium:appActivity","com.vrproductiveapps.whendo.ui.HomeActivity");
         capabilities.setCapability("platformName","Android");
         capabilities.setCapability("appium:automationName","uiautomator2");
 
